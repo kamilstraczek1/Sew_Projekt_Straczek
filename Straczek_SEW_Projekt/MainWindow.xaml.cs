@@ -23,6 +23,7 @@ namespace Straczek_SEW_Projekt
         public MainWindow()
         {
             InitializeComponent();
+            
         }
     }
 }

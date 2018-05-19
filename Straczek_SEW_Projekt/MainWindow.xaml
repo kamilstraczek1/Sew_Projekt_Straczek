@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Straczek_SEW_Projekt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="500" Width="650">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="167,84,0,0" VerticalAlignment="Top" Width="159" Height="37"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="83,91,0,0" VerticalAlignment="Top" Width="159" Height="37"/>
 
     </Grid>
 </Window>
