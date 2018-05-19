@@ -8,9 +8,9 @@ namespace Straczek_SEW_Projekt
 {
     class CD_Player:Musikplayer
     {
-        public int Länge { get; set; }
+        public double Länge { get; set; }
 
-        public CD_Player(int id, string titel, string künstler, string album, int länge) : base(id, titel, künstler, album)
+        public CD_Player(int id, string titel, string künstler, string album, double länge) : base(id, titel, künstler, album)
         {
             ID = id;
             Titel = titel;

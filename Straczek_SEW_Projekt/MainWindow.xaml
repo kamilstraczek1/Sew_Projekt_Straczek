@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Straczek_SEW_Projekt"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="650">
+        Title="MainWindow" Height="563.725" Width="838.235">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="83,91,0,0" VerticalAlignment="Top" Width="159" Height="37"/>
+        <Button x:Name="lesen" Content="Datei einlesen" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="113" Height="37" Click="Button_Click"/>
+        <ListBox x:Name="lb1" HorizontalAlignment="Left" Height="221" Margin="141,158,0,0" VerticalAlignment="Top" Width="659" SelectionChanged="ListBox_SelectionChanged"/>
 
     </Grid>
 </Window>

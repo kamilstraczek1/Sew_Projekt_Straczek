@@ -9,6 +9,7 @@ namespace Straczek_SEW_Projekt
     class Tonbandgerät:Musikplayer
     {
         public string Tonband { get; set; }
+
         public Tonbandgerät(int id, string titel, string künstler, string album, string tonband) : base(id, titel, künstler, album)
         {
             ID = id;
