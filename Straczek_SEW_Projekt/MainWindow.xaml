@@ -7,8 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="563.725" Width="838.235">
     <Grid>
-        <Button x:Name="lesen" Content="Datei einlesen" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="113" Height="37" Click="Button_Click"/>
-        <ListBox x:Name="lb1" HorizontalAlignment="Left" Height="221" Margin="141,158,0,0" VerticalAlignment="Top" Width="659" SelectionChanged="ListBox_SelectionChanged"/>
+        <Button x:Name="lesen" Content="Datei einlesen" HorizontalAlignment="Left" Margin="25,101,0,0" VerticalAlignment="Top" Width="113" Height="37" Click="Button_Click"/>
+        <ListBox x:Name="lb1" HorizontalAlignment="Left" Height="221" Margin="161,30,0,0" VerticalAlignment="Top" Width="659" SelectionChanged="ListBox_SelectionChanged"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="145,328,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <TextBox x:Name="tb1" HorizontalAlignment="Left" Height="57" Margin="268,312,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="327" TextChanged="tb1_TextChanged"/>
+        <Label Content="Korrekte Schreibweise:&#xD;&#xA;MP3: &quot;ID=1&quot; &quot;Titel&quot; &quot;Künstler&quot; &quot;Album&quot; &quot;Länge&quot; &quot;Größe&quot;&#xD;&#xA;CD:    &quot;ID=2&quot; &quot;Titel&quot; &quot;Künstler&quot; &quot;Album&quot; &quot;Länge&quot;&#xD;&#xA;Tonbandgerät: &quot;ID=3&quot; &quot;Titel&quot; &quot;Künstler&quot; &quot;Album&quot; &quot;Tonband&quot;" HorizontalAlignment="Left" Height="99" Margin="452,424,0,0" VerticalAlignment="Top" Width="368"/>
 
     </Grid>
 </Window>

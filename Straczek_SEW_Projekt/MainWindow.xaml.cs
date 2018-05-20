@@ -22,10 +22,10 @@ namespace Straczek_SEW_Projekt
     /// </summary>
     public partial class MainWindow : Window
     {
-        ObservableCollection<object> obsCollection;
+        ObservableCollection<object> obsCollection = new ObservableCollection<object>();
         public MainWindow()
         {
-            obsCollection = new ObservableCollection<object>();
+            
             InitializeComponent();
             lb1.ItemsSource = obsCollection;
         }
@@ -76,6 +76,20 @@ namespace Straczek_SEW_Projekt
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            
+            //  File.WriteAllText("Songs.csv", tb1.Text);
+            StreamWriter writer = new StreamWriter("Songs.csv",true);
+            writer.WriteLine(tb1.Text);
+            writer.Close();
+        }
+
+        private void tb1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+          //  MessageBox.Show("Wichtig!!!  Achte darauf, dass du die richtige Schreibweise behälst.");
         }
     }
 }
