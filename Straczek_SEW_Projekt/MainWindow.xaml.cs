@@ -22,17 +22,19 @@ namespace Straczek_SEW_Projekt
     /// </summary>
     public partial class MainWindow : Window
     {
+        ObservableCollection<object> obsCollection;
         public MainWindow()
         {
+            obsCollection = new ObservableCollection<object>();
             InitializeComponent();
-           
+            lb1.ItemsSource = obsCollection;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                StreamReader readcsv = new StreamReader("csv.csv");
+                StreamReader readcsv = new StreamReader("Songs.csv");
            
             while (!readcsv.EndOfStream)
             {
@@ -40,31 +42,27 @@ namespace Straczek_SEW_Projekt
                     //falls ID == 2 dann ist es eine CD und falls ID == 3 dann ist es ein Tonbandgerät. Die ID muss an der position 0(also am anfang) in der CSV Datei enhalten werden.
                 string line = readcsv.ReadLine();
                 string[] parts = line.Split(',');
-                ObservableCollection<object> obsCollection = new ObservableCollection<object>(parts);
-                    if (int.Parse(parts[0]) == 1)
+                    int parts0 = int.Parse(parts[0]);
+                    if (parts0 == 1)
                     {
                         
-                            Mp3_Player mp3 = new Mp3_Player(int.Parse(parts[0]), parts[1], parts[2], parts[3], double.Parse(parts[4]), double.Parse(parts[5]));
-                      
-                        lb1.Items.Add("ID: " + parts[0] + "  Titel: " + parts[1] + "  Künstler: " + parts[2] + "  Album: " + parts[3] + "  Länge: " + parts[4] + "min" + "  Größe: " + parts[5]+"MB");
-                    }
-                    else if (int.Parse(parts[0]) == 2)
-                    {
-                        CD_Player cd = new CD_Player(int.Parse(parts[0]), parts[1], parts[2], parts[3], double.Parse(parts[4]));
+                            Mp3_Player mp3 = new Mp3_Player(parts0, parts[1], parts[2], parts[3], double.Parse(parts[4]), double.Parse(parts[5]));
+                        obsCollection.Add(mp3);
                        
-                        lb1.Items.Add("ID: " + parts[0] + "  Titel: " + parts[1] + "  Künstler: " + parts[2] + "  Album: " + parts[3] + "  Länge: " + parts[4] + "min");
+                    }
+                    else if (parts0 == 2)
+                    {
+                        CD_Player cd = new CD_Player(parts0, parts[1], parts[2], parts[3], double.Parse(parts[4]));
+
+                        obsCollection.Add(cd);
                     }
                     else
                     {
-                        Tonbandgerät ton = new Tonbandgerät(int.Parse(parts[0]), parts[1], parts[2], parts[3], parts[4]);
-                        
-                        lb1.Items.Add("ID: " + parts[0] + "  Titel: " + parts[1] + "  Künstler: " + parts[2] + "  Album: " + parts[3] + "  Tonband: " + parts[4]);
+                        Tonbandgerät ton = new Tonbandgerät(parts0, parts[1], parts[2], parts[3], parts[4]);
+
+                        obsCollection.Add(ton);
                     }
-                    
-                foreach (var item in obsCollection)
-                {
-                    
-                }         
+                            
 
             }
             }

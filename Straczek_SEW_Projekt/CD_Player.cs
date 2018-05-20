@@ -19,5 +19,9 @@ namespace Straczek_SEW_Projekt
             Länge = länge;
             
         }
+        public override string ToString()
+        {
+            return "ID: " + ID + "  Titel: " + Titel + "  Künstler: " + Künstler + "  Album: " + Album + "  Länge: " + Länge + "min";
+        }
     }
 }

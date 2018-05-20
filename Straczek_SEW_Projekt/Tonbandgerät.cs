@@ -18,5 +18,10 @@ namespace Straczek_SEW_Projekt
             Album = album;
             Tonband = tonband;
         }
+
+        public override string ToString()
+        {
+            return "ID: " + ID + "  Titel: " + Titel + "  Künstler: " + Künstler + "  Album: " + Album + "  Länge: " + Tonband;
+        }
     }
 }
