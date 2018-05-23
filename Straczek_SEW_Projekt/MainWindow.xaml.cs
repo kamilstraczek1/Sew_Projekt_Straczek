@@ -22,6 +22,7 @@ namespace Straczek_SEW_Projekt
     /// </summary>
     public partial class MainWindow : Window
     {
+        Queue<object> queue = new Queue<object>();
         ObservableCollection<object> obsCollection = new ObservableCollection<object>();
         public MainWindow()
         {
@@ -62,7 +63,7 @@ namespace Straczek_SEW_Projekt
 
                         obsCollection.Add(ton);
                     }
-                            
+                   
 
             }
             }
@@ -85,11 +86,39 @@ namespace Straczek_SEW_Projekt
             StreamWriter writer = new StreamWriter("Songs.csv",true);
             writer.WriteLine(tb1.Text);
             writer.Close();
+            tb1.Text = "";
         }
 
         private void tb1_TextChanged(object sender, TextChangedEventArgs e)
         {
           //  MessageBox.Show("Wichtig!!!  Achte darauf, dass du die richtige Schreibweise behälst.");
+        }
+
+        private void button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+             int a = lb1.SelectedIndex;
+            //lb2.Items.Add(obsCollection[a]);
+            queue.Enqueue(lb2.Items.Add(obsCollection[a]));
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+            queue.Dequeue();
+                int count = 0;
+
+                lb2.Items.RemoveAt(count);
+                count++; 
+            }
+            catch (InvalidOperationException)
+            {
+
+                MessageBox.Show("Keine Einträge in der Playlist vorhanden");
+            }
+            
+            
         }
     }
 }

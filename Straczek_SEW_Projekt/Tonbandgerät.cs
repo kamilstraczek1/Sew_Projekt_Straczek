@@ -21,7 +21,7 @@ namespace Straczek_SEW_Projekt
 
         public override string ToString()
         {
-            return "ID: " + ID + "  Titel: " + Titel + "  Künstler: " + Künstler + "  Album: " + Album + "  Länge: " + Tonband;
+            return "ID: " + ID + "  Titel: " + Titel + "  Künstler: " + Künstler + "  Album: " + Album + "  Tonband: " + Tonband;
         }
     }
 }
