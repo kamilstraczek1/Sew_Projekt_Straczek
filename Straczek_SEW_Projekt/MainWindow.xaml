@@ -6,33 +6,33 @@
         xmlns:local="clr-namespace:Straczek_SEW_Projekt"
         mc:Ignorable="d"
         Title="MainWindow" Height="850.725" Width="800.235">
-    <Grid Margin="0,0,2,-2">
+    <Grid Margin="0,0,2,-2" Background="Black">
         <DockPanel HorizontalAlignment="Left" Height="200" LastChildFill="False" VerticalAlignment="Top" Width="725" Margin="27,23,0,0">
-            <Button x:Name="lesen" Content="Datei einlesen" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" Width="100" Height="31" Click="Button_Click"/>
+            <Button x:Name="lesen" Content="Datei einlesen" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" Width="100" Height="31" Click="Button_Click" Background="#FFE8FF00"/>
             <ListBox x:Name="lb1" HorizontalAlignment="Left" Height="180" Margin="80,10,0,0" VerticalAlignment="Top" Width="481" SelectionChanged="ListBox_SelectionChanged"/>
 
         </DockPanel>
         <DockPanel HorizontalAlignment="Left" Height="199" LastChildFill="False" VerticalAlignment="Top" Width="725" Margin="27,228,0,0">
-            <Button Content="Schreiben" HorizontalAlignment="Left" Margin="40,85,0,0" VerticalAlignment="Top" Width="91" Click="Button_Click_1" Height="31"/>
-            <TextBox x:Name="tb1" HorizontalAlignment="Left" Height="179" Margin="90,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="482" TextChanged="tb1_TextChanged"/>
+            <Button Content="Schreiben" HorizontalAlignment="Left" Margin="40,85,0,0" VerticalAlignment="Top" Width="91" Click="Button_Click_1" Height="31" Background="#FFE8FF00"/>
+            <TextBox x:Name="tb1" HorizontalAlignment="Left" Height="179" Margin="90,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="482" GotFocus="tb1_GotFocus"/>
         </DockPanel>
 
-        <Label Content="Korrekte Schreibweise:&#xA;MP3: &quot;ID=1&quot;,&quot;Titel&quot;,&quot;Künstler&quot;,&quot;Album&quot;,&quot;Länge&quot;,&quot;Größe&quot;&#xA;CD:    &quot;ID=2&quot;,&quot;Titel&quot;,&quot;Künstler&quot;,&quot;Album&quot;,&quot;Länge&quot;&#xA;Tonbandgerät: &quot;ID=3&quot;,&quot;Titel&quot;,&quot;Künstler&quot;,&quot;Album&quot;,&quot;Tonband&quot;" HorizontalAlignment="Left" Height="99" Margin="200,675,0,0" VerticalAlignment="Top" Width="433"/>
+        <Label Content="Korrekte Schreibweise:&#xA;MP3: &quot;ID=1&quot;,&quot;Titel&quot;,&quot;Künstler&quot;,&quot;Album&quot;,&quot;Länge&quot;,&quot;Größe&quot;&#xA;CD:    &quot;ID=2&quot;,&quot;Titel&quot;,&quot;Künstler&quot;,&quot;Album&quot;,&quot;Länge&quot;&#xA;Tonbandgerät: &quot;ID=3&quot;,&quot;Titel&quot;,&quot;Künstler&quot;,&quot;Album&quot;,&quot;Tonband&quot;" HorizontalAlignment="Left" Height="99" Margin="250,663,0,0" VerticalAlignment="Top" Width="432" Background="#FFF3FF00"/>
 
         <DockPanel HorizontalAlignment="Left" Height="208" LastChildFill="False" VerticalAlignment="Top" Width="725" Margin="27,432,0,0">
 
             <StackPanel Height="157" VerticalAlignment="Top" Width="186" Margin="10,10,0,0">
-                <Button x:Name="button" Content="Playlist" HorizontalAlignment="Left" Margin="30,50,0,0" VerticalAlignment="Top" Width="84" Click="button_Click_2" Height="26"/>
-                <Button x:Name="button1" Content="Gehört" HorizontalAlignment="Left" Margin="30,31,0,0" VerticalAlignment="Top" Width="84" Click="button1_Click" Height="26"/>
+                <Button x:Name="button" Content="Playlist" HorizontalAlignment="Left" Margin="30,50,0,0" VerticalAlignment="Top" Width="84" Click="button_Click_2" Height="26" Background="#FFD5DE12"/>
+                <Button x:Name="button1" Content="Gehört" HorizontalAlignment="Left" Margin="30,31,0,0" VerticalAlignment="Top" Width="84" Click="button1_Click" Height="26" Background="#FFD8E20E"/>
 
 
             </StackPanel>
 
-            <ListBox x:Name="lb2" HorizontalAlignment="Left" Height="181" Margin="25,10,0,0" VerticalAlignment="Top" Width="484"/>
-
+            <ListBox x:Name="lb2" HorizontalAlignment="Left" Height="181" Margin="23,10,0,0" VerticalAlignment="Top" Width="484"/>
+           
 
         </DockPanel>
-
+        
 
 
     </Grid>

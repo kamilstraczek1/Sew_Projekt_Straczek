@@ -89,17 +89,23 @@ namespace Straczek_SEW_Projekt
             tb1.Text = "";
         }
 
-        private void tb1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-          //  MessageBox.Show("Wichtig!!!  Achte darauf, dass du die richtige Schreibweise behälst.");
-        }
+      
 
         private void button_Click_2(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                int a = lb1.SelectedIndex;
+                //lb2.Items.Add(obsCollection[a]);
+                queue.Enqueue(lb2.Items.Add(obsCollection[a]));
+            }
+            catch (ArgumentOutOfRangeException)
+            {
 
-             int a = lb1.SelectedIndex;
-            //lb2.Items.Add(obsCollection[a]);
-            queue.Enqueue(lb2.Items.Add(obsCollection[a]));
+                MessageBox.Show("Bitte einen Song für die Playlist auswählen!");
+            }
+
+             
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -119,6 +125,11 @@ namespace Straczek_SEW_Projekt
             }
             
             
+        }
+
+        private void tb1_GotFocus(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Wichtig!!!  Achte darauf, dass du die richtige Schreibweise behälst.");
         }
     }
 }
